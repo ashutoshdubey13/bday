@@ -1,0 +1,74 @@
+body {
+    background-color: #ffebcd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border: 2px solid #f08080;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+h1 {
+    color: #f08080;
+    font-size: 2.5em;
+}
+
+p {
+    font-size: 1.2em;
+    color: #333;
+}
+
+button {
+    background-color: #f08080;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: #ff6347;
+}
+
+#hiddenMessage {
+    display: none;
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #f08080;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes confetti {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(100vh); }
+}
+
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #f08080;
+    top: 0;
+    animation: confetti 2s linear infinite;
+}
+
+.confetti:nth-child(2n) {
+    background-color: #ff6347;
+}
